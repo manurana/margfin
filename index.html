@@ -28,10 +28,10 @@
     <div class="container">
       <h2>Existing Loan</h2>
       <form id="contact-form">
-        <label for="current-rate">What is your current rate?</label>
+        <label for="current-rate">What is your current loan rate?</label>
         <input
           name="current-rate"
-          placeholder="New Rate in %"
+          placeholder="new rate in %"
           value="8.5"
           id="current-rate"
           required
@@ -41,7 +41,7 @@
         <input
           type="number"
           name="current-emi"
-          placeholder="Current EMI in Rupees"
+          placeholder="current EMI in Rupees"
           value="76788"
           id="current-emi"
           required
@@ -53,7 +53,7 @@
         <input
           type="number"
           name="current-tenure"
-          placeholder="Current Tenure in months"
+          placeholder="current tenure in months"
           value="153"
           id="current-tenure"
           required
@@ -63,7 +63,7 @@
         <input
           type="number"
           name="od-loan"
-          placeholder="OD Loan in Rupees"
+          placeholder="avg savings balance in Rupees"
           value="200000"
           id="od-loan"
           class="input-box"
@@ -73,13 +73,11 @@
       </form>
       <h2>Proposed Loan</h2>
 
-      <div>Lowest Mkt Rate: 7.5%</div>
-      <div>
-        <span>Pending Principle: </span><span id="pending-principle"></span>
-      </div>
-      <div><span>Effective Loan: </span><span id="effective-loan"></span></div>
-      <div><span>New Tenure: </span><span id="new-tenure"></span></div>
-      <div><span>Total Saving: </span><span id="total-saving"></span></div>
+      <div>Lowest Mkt Rate: <span id="lowest-rate"></span></div>
+      <div>Pending Principle: <span id="pending-principle"></span></div>
+      <div>Effective Loan: <span id="effective-loan"></span></div>
+      <div>New Tenure: <span id="new-tenure"></span></div>
+      <div>Total Saving: <span id="total-saving"></span></div>
     </div>
     <script src="./index.js"></script>
   </body>

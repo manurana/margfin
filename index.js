@@ -1,3 +1,5 @@
+const LOWEST_MKT_RATE = 0.079;
+
 // define the onSubmit function
 function onSubmit(event) {
   event.preventDefault();
@@ -26,10 +28,8 @@ function onSubmit(event) {
 
   const effectiveLoan = pendingPrinciple - Number(jsonData["od-loan"]);
 
-  const lowestMktRate = 7.9;
-
   const newTenure = formulajs.NPER(
-    lowestMktRate / (12 * 100),
+    LOWEST_MKT_RATE / 12,
     -Number(jsonData["current-emi"]),
     effectiveLoan
   );
@@ -38,13 +38,26 @@ function onSubmit(event) {
     (Number(jsonData["current-tenure"]) - newTenure) *
     Number(jsonData["current-emi"]);
 
-  document.querySelector("#pending-principle").textContent = pendingPrinciple;
-  //   document
-  //     .querySelector("#pending-principle")
-  //     .insertAdjacentText("beforeend", ` ${pendingPrinciple}`);
-  document.querySelector("#effective-loan").textContent = effectiveLoan;
-  document.querySelector("#new-tenure").textContent = newTenure;
-  document.querySelector("#total-saving").textContent = totalSaving;
+  const rupeeFormat = new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "INR",
+    maximumFractionDigits: 0,
+  });
+
+  const rateFormat = new Intl.NumberFormat("en-IN", {
+    style: "percent",
+    minimumFractionDigits: 2,
+  });
+
+  document.querySelector("#lowest-rate").textContent =
+    rateFormat.format(LOWEST_MKT_RATE);
+  document.querySelector("#pending-principle").textContent =
+    rupeeFormat.format(pendingPrinciple);
+  document.querySelector("#effective-loan").textContent =
+    rupeeFormat.format(effectiveLoan);
+  document.querySelector("#new-tenure").textContent = Math.round(newTenure);
+  document.querySelector("#total-saving").textContent =
+    rupeeFormat.format(totalSaving);
 }
 
 // attach the onSubmit function to the form
