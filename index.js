@@ -7,19 +7,6 @@ function onSubmit(event) {
   var formData = new FormData(event.target);
   var jsonData = Object.fromEntries(formData.entries());
 
-  //   alert(JSON.stringify(jsonData));
-
-  // https://gist.github.com/ghalimi/4638848
-  //   function PV(rate, nper, pmt) {
-  //     return (pmt / rate) * (1 - Math.pow(1 + rate, -nper));
-  //   }
-
-  //   const b = PV(
-  //     Number(jsonData["current-rate"]) / 1200,
-  //     Number(jsonData["current-tenure"]),
-  //     Number(jsonData["current-emi"])
-  //   );
-
   const pendingPrinciple = formulajs.PV(
     Number(jsonData["current-rate"]) / (12 * 100),
     Number(jsonData["current-tenure"]),

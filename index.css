@@ -7,6 +7,9 @@
 
 dt {
   text-transform: uppercase;
+  margin-bottom: 0;
+  /* float: left; */
+  /* clear: left; */
 }
 
 dt::after {
@@ -16,6 +19,8 @@ dt::after {
 dd {
   font-weight: 700;
   font-size: 2rem;
+  margin-left: 0;
+  margin-bottom: 1rem;
 }
 
 .existing-loan {
@@ -29,10 +34,3 @@ dd {
   border-color: #009688;
   padding: 2rem;
 }
-
-/* .contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 12px;
-} */
