@@ -26,58 +26,69 @@
   </head>
   <body>
     <div class="container">
-      <h2>Existing Loan</h2>
-      <form id="contact-form">
-        <label for="current-rate">What is your current loan rate?</label>
-        <input
-          name="current-rate"
-          placeholder="new rate in %"
-          value="8.5"
-          id="current-rate"
-          required
-        />
+      <div class="existing-loan">
+        <h2>Existing Loan</h2>
+        <form id="contact-form">
+          <label for="current-rate">What is your current loan rate?</label>
+          <input
+            name="current-rate"
+            placeholder="new rate in %"
+            value="8.5"
+            id="current-rate"
+            required
+          />
 
-        <label for="current-emi">What is your current EMI (approx)?</label>
-        <input
-          type="number"
-          name="current-emi"
-          placeholder="current EMI in Rupees"
-          value="76788"
-          id="current-emi"
-          required
-        />
+          <label for="current-emi">What is your current EMI (approx)?</label>
+          <input
+            type="number"
+            name="current-emi"
+            placeholder="current EMI in Rupees"
+            value="76788"
+            id="current-emi"
+            required
+          />
 
-        <label for="current-tenure"
-          >What is your current loan tenure (in months)?</label
-        >
-        <input
-          type="number"
-          name="current-tenure"
-          placeholder="current tenure in months"
-          value="153"
-          id="current-tenure"
-          required
-        />
+          <label for="current-tenure"
+            >What is your current loan tenure (in months)?</label
+          >
+          <input
+            type="number"
+            name="current-tenure"
+            placeholder="current tenure in months"
+            value="153"
+            id="current-tenure"
+            required
+          />
 
-        <label for="od-loan">What is your avg Savings A/C balance?</label>
-        <input
-          type="number"
-          name="od-loan"
-          placeholder="avg savings balance in Rupees"
-          value="200000"
-          id="od-loan"
-          class="input-box"
-          required
-        />
-        <button id="submit-btn" type="submit">Calculate Savings</button>
-      </form>
-      <h2>Proposed Loan</h2>
+          <label for="od-loan">What is your avg Savings A/C balance?</label>
+          <input
+            type="number"
+            name="od-loan"
+            placeholder="avg savings balance in Rupees"
+            value="200000"
+            id="od-loan"
+            class="input-box"
+            required
+          />
+          <button id="submit-btn" type="submit">Calculate Savings</button>
+        </form>
+      </div>
 
-      <div>Lowest Mkt Rate: <span id="lowest-rate"></span></div>
-      <div>Pending Principle: <span id="pending-principle"></span></div>
-      <div>Effective Loan: <span id="effective-loan"></span></div>
-      <div>New Tenure: <span id="new-tenure"></span></div>
-      <div>Total Saving: <span id="total-saving"></span></div>
+      <div id="proposed-loan" class="proposed-loan">
+        <h2>Proposed Loan</h2>
+        <dl>
+          <dt>Lowest Mkt Rate</dt>
+          <dd id="lowest-rate"></dd>
+          <dt>Pending Principle</dt>
+          <dd id="pending-principle"></dd>
+          <dt>Effective Loan</dt>
+          <dd id="effective-loan"></dd>
+          <dt>New Tenure</dt>
+          <dd id="new-tenure"></dd>
+          <dt>Total Saving</dt>
+          <dd id="total-saving"></dd>
+        </dl>
+      </div>
     </div>
     <script src="./index.js"></script>
   </body>

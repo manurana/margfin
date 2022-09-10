@@ -1,15 +1,33 @@
-/* * {
-  font-family: sans-serif;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-} */
-
 .container {
   width: 100%;
   max-width: 480px;
   margin: 0 auto;
   padding: 0 48px;
+}
+
+dt {
+  text-transform: uppercase;
+}
+
+dt::after {
+  content: ": ";
+}
+
+dd {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.existing-loan {
+  padding: 2rem;
+}
+
+.proposed-loan {
+  display: none;
+  background-color: #e0f2f1;
+  border: 1px dotted;
+  border-color: #009688;
+  padding: 2rem;
 }
 
 /* .contact-form {

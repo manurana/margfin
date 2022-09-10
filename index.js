@@ -49,15 +49,28 @@ function onSubmit(event) {
     minimumFractionDigits: 2,
   });
 
+  const monthFormat = new Intl.NumberFormat("en-IN", {
+    style: "unit",
+    unit: "month",
+    unitDisplay: "long",
+    maximumFractionDigits: 0,
+  });
+
   document.querySelector("#lowest-rate").textContent =
     rateFormat.format(LOWEST_MKT_RATE);
   document.querySelector("#pending-principle").textContent =
     rupeeFormat.format(pendingPrinciple);
   document.querySelector("#effective-loan").textContent =
     rupeeFormat.format(effectiveLoan);
-  document.querySelector("#new-tenure").textContent = Math.round(newTenure);
+  document.querySelector("#new-tenure").textContent =
+    monthFormat.format(newTenure);
   document.querySelector("#total-saving").textContent =
     rupeeFormat.format(totalSaving);
+
+  document
+    .querySelector("#proposed-loan")
+    .style.setProperty("display", "block");
+  //   window.scrollTo(0, document.body.scrollHeight);
 }
 
 // attach the onSubmit function to the form
