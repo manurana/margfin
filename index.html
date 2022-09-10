@@ -8,38 +8,58 @@
 
     <script src="https://cdn.jsdelivr.net/npm/jstat@1.9.2/dist/jstat.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/formulajs/formulajs@2.9.3/dist/formula.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
     <div class="container">
-      <h4 class="cta-heading" id="cta-heading">Existing Loan</h4>
-      <form id="contact-form" class="contact-form">
+      <h2>Existing Loan</h2>
+      <form id="contact-form">
+        <label for="current-rate">What is your current rate?</label>
         <input
           name="current-rate"
-          placeholder="New Rate in % (required)"
+          placeholder="New Rate in %"
           value="8.5"
           id="current-rate"
-          class="input-box"
           required
         />
+
+        <label for="current-emi">What is your current EMI (approx)?</label>
         <input
           type="number"
           name="current-emi"
           placeholder="Current EMI in Rupees"
           value="76788"
           id="current-emi"
-          class="input-box"
           required
         />
+
+        <label for="current-tenure"
+          >What is your current loan tenure (in months)?</label
+        >
         <input
           type="number"
           name="current-tenure"
           placeholder="Current Tenure in months"
           value="153"
           id="current-tenure"
-          class="input-box"
           required
         />
+
+        <label for="od-loan">What is your avg Savings A/C balance?</label>
         <input
           type="number"
           name="od-loan"
@@ -49,10 +69,10 @@
           class="input-box"
           required
         />
-        <button id="submit-btn" type="submit" class="submit-btn">
-          Calculate
-        </button>
+        <button id="submit-btn" type="submit">Calculate Savings</button>
       </form>
+      <h2>Proposed Loan</h2>
+
       <div>Lowest Mkt Rate: 7.5%</div>
       <div>
         <span>Pending Principle: </span><span id="pending-principle"></span>

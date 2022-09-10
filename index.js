@@ -49,5 +49,5 @@ function onSubmit(event) {
 
 // attach the onSubmit function to the form
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelector(".contact-form").addEventListener("submit", onSubmit);
+  document.querySelector("#contact-form").addEventListener("submit", onSubmit);
 });

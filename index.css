@@ -1,9 +1,9 @@
-* {
-  font-family: "Poppins", sans-serif;
+/* * {
+  font-family: sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
+} */
 
 .container {
   width: 100%;
@@ -12,10 +12,9 @@
   padding: 0 48px;
 }
 
-.contact-form {
-  /* width: 460px; */
+/* .contact-form {
   display: flex;
   flex-direction: column;
   gap: 12px;
   margin-bottom: 12px;
-}
+} */
