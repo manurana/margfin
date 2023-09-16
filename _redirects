@@ -1,2 +1,2 @@
-/.well_known/*  /well_known/:splat 200
+/.well-known/*  /well-known/:splat 200
 

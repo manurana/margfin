@@ -1,0 +1,3 @@
+{
+  "jwks_uri": "https://poetic-bonbon-064d81.netlify.app/.well-known/jwks.json"
+}
